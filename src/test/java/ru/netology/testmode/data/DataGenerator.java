@@ -40,6 +40,7 @@ public class DataGenerator {
         return login;
     }
 
+
     public static String getRandomPassword() {
         String password = faker.internet().password();
         return password;
@@ -48,14 +49,14 @@ public class DataGenerator {
     public static class Registration {
         private Registration() {
         }
-
+//
         public static RegistrationDto getUser(String status) {
             var user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
             return user;
         }
 
         public static RegistrationDto getRegisteredUser(String status) {
-            var registeredUser = getRegisteredUser(status);
+            var registeredUser = getUser(status);
             sendRequest(registeredUser);
             return registeredUser;
         }
