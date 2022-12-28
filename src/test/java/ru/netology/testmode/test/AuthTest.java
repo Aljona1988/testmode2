@@ -38,7 +38,7 @@ class AuthTest {
         $("h2").shouldHave(Condition.exactText("Личный кабинет")).shouldBe(Condition.visible);
     }
 
-   // @Test
+    @Test
     @DisplayName("Should get error message if login with not registered user")
     void shouldGetErrorIfNotRegisteredUser() {
         var notRegisteredUser = getUser("active");
@@ -61,7 +61,7 @@ class AuthTest {
                 .shouldBe(Condition.visible);
     }
 
-  //  @Test
+  @Test
     @DisplayName("Should get error message if login with wrong login")
     void shouldGetErrorIfWrongLogin() {
         var registeredUser = getUser("active");
@@ -73,7 +73,7 @@ class AuthTest {
                 .shouldBe(Condition.visible);
     }
 
- //   @Test
+  @Test
     @DisplayName("Should get error message if login with wrong password")
     void shouldGetErrorIfWrongPassword() {
         var registeredUser = getUser("active");
